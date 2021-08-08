@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Profit Or Loss</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="displayStocks">
+            <div class="checkProfitLoss">
+                <nav class="navigation">
+                    <a href="">Github Repo</a>
+                </nav>
+                <div class="profit-loss">
+                    <h1 id="app-heading">Check Profit/Loss on Your Stock</h1>
+                    <label>
+                        <input id="purchase-price" type="text" placeholder="Enter Cost Price of Stock"/>
+                        Purchase Price
+                    </label>
+                    <label>
+                        <input id="stock-qty" type="text" placeholder="Enter Quantity of Stock"/>
+                        Stock Quantity
+                    </label>
+                    <label>
+                        <input id="current-price" type="text" placeholder="Enter Current Price of Stock"/>
+                        Current Price
+                    </label>
+                    <button id="check">Check</button>
+                    <div class="output" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="images">
+                <a id="connect" href="https://twitter.com/DevanshYtweets">Connect With Me</a>
+                <div class="imgOverlap">
+                    <img id="stocks-img" src="./assets/stonks.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="src/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --profit-loss-bg: #100c08;
+    --btn-bg-color: #D1D5DB;
+    --output-bg-color: rgb(255, 255, 255, 0.2);
+    --image-bg-color: #e5e4e2; /* #2563EB */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container .displayStocks {
+    display: flex;
+    flex-direction: row;
+    margin: 4rem auto;
+    max-width: 85%;
+    min-height: 80vh;
+    background-color: var(--profit-loss-bg);
+}
+
+.displayStocks .checkProfitLoss {
+    max-width: 60%;
+    background-color: var(--profit-loss-bg);
+}
+
+.checkProfitLoss .navigation {
+    text-align: right;
+    padding: 0.5rem;
+    margin: 2rem;
+}
+
+.checkProfitLoss .profit-loss {
+    max-width: 70%;
+    margin: auto;
+}
+
+.profit-loss #app-heading {
+    font-size: 2.5rem;
+    margin: 2rem 0rem;
+}
+
+.profit-loss label {
+    border-bottom: 1px solid white;
+}
+
+.profit-loss input {
+    margin: 0.5rem 0rem;
+    width: 50%;
+    border: none;
+    background-color: transparent;
+    padding: 0.2rem;
+}
+
+.profit-loss #check {
+    display: block;
+    background-color: var(--btn-bg-color);
+    color: var(--profit-loss-bg);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.1rem;
+}
+
+.profit-loss #check:hover {
+    background-color: var(--profit-loss-bg);
+    color: var(--btn-bg-color);
+    border: 2px solid var(--btn-bg-color);
+}
+
+.profit-loss .output {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: var(--output-bg-color);
+    color: white;
+    text-align: center;
+}
+
+.displayStocks .images {
+    width: 40%;
+    background-color: var(--image-bg-color);
+}
+
+.images #connect {
+    padding: 0.5rem 2rem;
+    margin: 2rem 3rem 0rem auto;
+    display: block;
+    border: 2px solid var(--profit-loss-bg);
+    width: fit-content;
+    text-decoration: none;
+    color: var(--profit-loss-bg);
+}
+
+.images #connect:hover {
+    background-color: var(--profit-loss-bg);
+    color: var(--image-bg-color);
+}
+
+.images .imgOverlap img {
+    width: 27vw;
+    height: 70vh;
+    object-fit: contain;
+    padding: 0rem 2.5rem;
+}
+
+/* Responsive CSS for Mobile */
+@media only screen and (max-width: 790px) {
+    .container .displayStocks {
+        flex-direction: column;
+    }
+
+    .displayStocks .checkProfitLoss {
+        max-width: none;
+    }
+
+    .displayStocks .images {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .images .imgOverlap {
+        text-align: center;
+    }
+
+    .images .imgOverlap img {
+        width: 40vw;
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .profit-loss #app-heading {
+        font-size: 2rem;
+    }
+
+    .profit-loss input {
+        width: 40%;
+        font-size: 0.5rem;
+    }
+
+    .profit-loss label {
+        font-size: 0.8rem;
+    }
+
+    .images .imgOverlap img {
+        width: 50vw;
+        height: 40vh;
+        margin: 1rem 0rem;
+    }
+
+    .images #connect {
+        padding: 0.5rem 1rem;
+        margin: 2rem auto 0rem auto;
+    }
+}
