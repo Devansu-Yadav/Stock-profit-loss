@@ -14,8 +14,8 @@ function checkForProfitLoss() {
     if(purchase === "" || qty === "" || currPrice === "") {
         output.innerText = "Enter value for all the fields!!";
     }
-    else if(purchase > 0 && qty > 0 && currPrice > 0) {
-        calculateProfitLoss(purchase, qty, currPrice);
+    else if(Number(purchase) > 0 && Number(qty) > 0 && Number(currPrice) > 0) {
+        calculateProfitLoss(Number(purchase), Number(qty), Number(currPrice));
     }
     else {
         output.innerText = "Enter valid values for all the fields!!";
